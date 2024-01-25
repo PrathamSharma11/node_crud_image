@@ -1,0 +1,45 @@
+<div class="col-md-9">
+    <div class="dash-right">
+        <div class="dash-header">
+            <div class="dash-title">
+                <h1>Edit</h1>
+            </div>
+            <div class="dash-nav">
+                
+
+                <form method="post" action="/update/<%= d._id%>" enctype="multipart/form-data">
+                    <div class="form-group">
+ 
+                        <label>Title:</label>
+                        <input type="text" name="title" value="<%= d.title%>" class="form-control">
+              
+              
+              
+                       </div>
+
+                       
+                       <div class="form-group">
+ 
+                        <label>Image:</label>
+                        <input type="file" name="image" class="form-control">
+                        <img src="/<%= d.image %>" alt="error" style="max-width: 40px;">
+              
+              
+              
+                       </div>
+                       <input type="hidden" name="old_image" value="/<%= d.image %>" />
+                       <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">update</button>
+                      </div>
+                </form>
+                  
+                  
+
+
+
+            </div>
+        
+        
+    </div>   
+</div>

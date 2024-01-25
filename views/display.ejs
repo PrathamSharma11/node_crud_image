@@ -1,0 +1,35 @@
+<table class="table table-bordered table-striped">
+    <tr>
+      <th>S.No.</th>
+
+      <th>Title</th>
+     
+      <th>Image</th>
+      <th>Action</th>
+    </tr>
+    <% i=1 %>
+      <% d.forEach((b)=>{ %>
+        <tr>
+
+          <td>
+            <%= i++ %>
+          </td>
+          <td>
+            <%= b.title %>
+          </td>
+          
+          <td><img src="<%= b.image %>" alt="error" style="max-width: 40px;"></td>
+          <td>
+           
+            <a href="/edit/<%= b._id %>" class="btn btn-danger">Edit</a>
+           
+          </td>
+
+
+        </tr>
+        <%})%>
+
+
+
+
+  </table>
